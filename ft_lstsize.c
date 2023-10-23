@@ -18,7 +18,7 @@ int	ft_lstsize(t_list *lst)
 	t_list	*current;
 
 	i = 0;
-	if (lst == NULL)
+	if (!lst)
 		return (0);
 	current = lst;
 	while (current != NULL)
@@ -28,3 +28,16 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+
+/*int main(void)
+{
+    t_list *my_list = ft_lstnew("Node 1");
+    ft_lstadd_back(&my_list, ft_lstnew("Node 2"));
+    ft_lstadd_back(&my_list, ft_lstnew("Node 3"));
+
+    int size = ft_lstsize(my_list);
+    printf("Size of the list: %d\n", size);
+
+    ft_lstclear(&my_list, free);
+    return (0);
+}*/

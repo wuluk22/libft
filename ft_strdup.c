@@ -6,7 +6,7 @@
 /*   By: clegros <clegros@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 08:59:48 by clegros           #+#    #+#             */
-/*   Updated: 2023/10/11 21:59:18 by clegros          ###   ########.fr       */
+/*   Updated: 2023/10/19 13:54:06 by clegros          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strcpy(char *dest, char *src)
 	int	i;
 
 	i = 0;
+	if (!dest || !src)
+		return (NULL);
 	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
@@ -26,16 +28,16 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s1)
 {
 	char	*copy;
 	int		size_c;
 
-	size_c = ft_strlen(src) + 1;
+	size_c = ft_strlen(s1) + 1;
 	copy = (char *) malloc(sizeof(char) * (size_c));
 	if (copy == NULL)
 		return (NULL);
-	ft_strcpy(copy, src);
+	ft_strcpy(copy, (char *)s1);
 	return (copy);
 }
 

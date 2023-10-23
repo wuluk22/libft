@@ -3,37 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clegros <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: clegros <clegros@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 15:20:23 by clegros           #+#    #+#             */
-/*   Updated: 2023/10/11 22:01:11 by clegros          ###   ########.fr       */
+/*   Created: 2023/10/19 12:55:13 by clegros           #+#    #+#             */
+/*   Updated: 2023/10/19 13:44:01 by clegros          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	j;
 
 	i = 0;
 	j = 0;
-	while (dest[i] && i < size)
+	while (dst[i] && i < dstsize)
 		i++;
-	while (src[j] && (i + j + 1) < size)
+	while (src[j] && (i + j + 1) < dstsize)
 	{
-		dest[i + j] = src[j];
+		dst[i + j] = src[j];
 		j++;
 	}
-	if (i != size)
-		dest[i + j] = '\0';
+	if (i != dstsize)
+		dst[i + j] = '\0';
 	return (i + ft_strlen(src));
 }
 
-/*#include <stdio.h>
-#include <string.h>
-
+/*
 int main(void)
 {
     char s[] = "Hello";

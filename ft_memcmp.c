@@ -29,3 +29,21 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+/*int main(void)
+{
+    char str1[] = "Hello, world!";
+    char str2[] = "Hello, world!";
+    int n = 13;
+
+    int result = ft_memcmp(str1, str2, n);
+
+    if (result < 0)
+        printf("str1 is less than str2\n");
+    else if (result > 0)
+        printf("str1 is greater than str2\n");
+    else
+        printf("str1 is equal to str2\n");
+
+    return (0);
+}*/

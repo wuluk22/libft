@@ -17,9 +17,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	j;
 
-	if (s1 == NULL)
+	if (!s1)
 		return (NULL);
-	if (set == NULL)
+	if (!set)
 		return ((char *)s1);
 	i = 0;
 	j = ft_strlen(s1);
@@ -31,3 +31,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	return (ft_substr(s1, i, j - i + 1));
 }
+
+/*int main(void)
+{
+    const char str[] = "   This is a test string.   ";
+    const char set[] = " ";
+
+    char *result = ft_strtrim(str, set);
+
+    if (result != NULL)
+	{
+        printf("Trimmed string: \"%s\"\n", result);
+        free(result);
+	}
+    else
+        printf("Memory allocation failed.\n");
+
+    return (0);
+}*/

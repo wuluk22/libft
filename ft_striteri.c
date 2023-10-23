@@ -17,9 +17,25 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	unsigned int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i] != '\0')
 	{
 		f(i, &s[i]);
 		i++;
 	}
 }
+
+/*void printCharIndex(unsigned int index, char *c)
+{
+    printf("Character at index %u: %c\n", index, *c);
+}
+
+int main(void)
+{
+    char str[] = "Hello, World!";
+
+    ft_striteri(str, &printCharIndex);
+
+    return (0);
+}*/

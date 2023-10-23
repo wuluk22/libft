@@ -16,3 +16,12 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
+
+/*int		main(void)
+{
+	char	buffer[10] = "abcdefghij";
+	printf("Original buffer: %s\n", buffer);
+	ft_bzero(buffer, 5);
+	printf("Buffer after ft_bzero: %s\n", buffer);
+	return (0);
+}*/

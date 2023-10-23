@@ -67,3 +67,28 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+/*int main(void)
+{
+    int test_values[] = {0, -2147483648, 42, -123456, 987654};
+    int length = 5;
+    int i = 0;
+
+    while (i < length)
+	{
+        int n = test_values[i];
+        char *result = ft_itoa(n);
+
+        if (result == NULL)
+		{
+            printf("Memory allocation failed.\n");
+            return (1);
+        }
+
+        printf("ft_itoa(%d) = %s\n", n, result);
+        free(result);
+
+        i++;
+    }
+    return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: clegros <clegros@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 15:12:27 by clegros           #+#    #+#             */
-/*   Updated: 2023/10/14 20:21:04 by clegros          ###   ########.fr       */
+/*   Updated: 2023/10/19 13:26:57 by clegros          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,37 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	char	*sub;
+	char	*substr;
+	size_t	s_len;
 
-	i = 0;
-	j = 0;
-	if (!*s || start >= ft_strlen(s))
-		return (ft_strdup("\0"));
-	if (len > ft_strlen(s) - start)
-		len = ft_strlen(s) - start;
-	sub = (char *)malloc(len + 1);
-	if (!sub)
+	if (!s)
 		return (NULL);
-	while (s[i])
-	{
-		if (i >= start && j < len)
-		{
-			sub[j] = s[i];
-			j ++;
-		}
-		i ++;
-	}
-	sub[j] = '\0';
-	return (sub);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (len > s_len - start)
+		len = s_len - start;
+	substr = malloc(sizeof(char) * (len + 1));
+	if (!substr)
+		return (NULL);
+	ft_memcpy(substr, s + start, len);
+	substr[len] = '\0';
+	return (substr);
 }
+
+/*int main(void)
+{
+    const char str[] = "This is a test string.";
+
+    char *result = ft_substr(str, 5, 7);
+
+    if (result != NULL)
+	{
+        printf("Substring: %s\n", result);
+        free(result);
+	}
+    else
+        printf("Memory allocation failed.\n");
+
+    return (0);
+}*/

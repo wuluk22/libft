@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clegros <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: clegros <clegros@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 09:21:31 by clegros           #+#    #+#             */
-/*   Updated: 2023/10/11 22:29:24 by clegros          ###   ########.fr       */
+/*   Created: 2023/10/19 12:53:55 by clegros           #+#    #+#             */
+/*   Updated: 2023/10/19 12:54:01 by clegros          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,12 @@ int	ft_atoi(const char *str)
 
 /*int	main(void)
 {
-	char str[] = "  -+--   123abc1";
+	char str[] = "  -+--123995459";
 	int	val;
 
 	val = ft_atoi(str);
+	int val2 = atoi(str);
 	printf("%d\n", val);
+	printf("%d\n", val2);
 	return (0);
 }*/

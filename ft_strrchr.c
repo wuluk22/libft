@@ -27,3 +27,17 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *) s + ft_strlen(s));
 	return (NULL);
 }
+
+/*int main(void)
+{
+    const char str[] = "This is a test string.";
+    int t_char = 'i';
+    char *res = ft_strrchr(str, t_char);
+
+    if (res != NULL)
+        printf("Last occurrence of '%c' found at pos: %zu\n", t_char, res - str);
+    else
+        printf("'%c' not found in the string.\n", t_char);
+
+    return (0);
+}*/

@@ -19,3 +19,18 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst->content);
 	free(lst);
 }
+
+/*int main(void)
+{
+    t_list *my_list = ft_lstnew("Node 1");
+
+    printf("Before deletion:\n");
+    printf("%s\n", (char *)(my_list->content));
+
+    ft_lstdelone(my_list, free);
+
+    printf("After deletion:\n");
+    if (my_list == NULL)
+        printf("List is empty.\n");
+    return (0);
+}*/

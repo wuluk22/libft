@@ -6,7 +6,7 @@
 /*   By: clegros <clegros@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 15:51:54 by clegros           #+#    #+#             */
-/*   Updated: 2023/10/14 18:14:12 by clegros          ###   ########.fr       */
+/*   Updated: 2023/10/19 13:39:56 by clegros          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,40 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	n;
+	size_t	i;
 
-	n = 0;
-	if (dst == NULL && src == NULL)
+	i = 0;
+	if (!dst && !src)
 		return (NULL);
 	if (src < dst)
 	{
-		n = len;
-		while (n > 0)
+		i = len;
+		while (i > 0)
 		{
-			n--;
-			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
+			i--;
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		}
 	}
 	else
 	{
-		n = 0;
-		while (n < len)
+		i = 0;
+		while (i < len)
 		{
-			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
-			n++;
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i++;
 		}
 	}
 	return (dst);
 }
+
+/*int main(void)
+{
+    char data[] = "1234567890";
+    char buffer[20];
+
+    ft_memmove(buffer, data, 5);
+    printf("Buffer: %s\n", buffer);
+    ft_memmove(buffer + 5, buffer, 5);
+    printf("Buffer: %s\n", buffer);
+    return (0);
+}*/

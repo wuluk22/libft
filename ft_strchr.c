@@ -24,3 +24,17 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *) s);
 	return (NULL);
 }
+
+/*int main(void)
+{
+    const char str[] = "This is a test string.";
+    int t_char = 'i';
+    char *res = ft_strchr(str, targetChar);
+
+    if (result != NULL)
+        printf("'%c' found at pos: %lu\n", t_char, (unsigned long)(res - str));
+    else
+        printf("'%c' not found in the string.\n", t_char);
+
+    return (0);
+}*/

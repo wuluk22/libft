@@ -25,3 +25,25 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		temp = temp->next;
 	}
 }
+
+/*void apply_function(void *content)
+{
+    printf("Applied function to element: %s\n", (char *)content);
+}
+
+int main(void)
+{
+    t_list *my_list = ft_lstnew("Node 1");
+    ft_lstadd_back(&my_list, ft_lstnew("Node 2"));
+    ft_lstadd_back(&my_list, ft_lstnew("Node 3"));
+
+    printf("Before applying function:\n");
+    t_list *current = my_list;
+    while (current != NULL)
+	{
+        printf("%s\n", (char *)(current->content));
+        current = current->next;
+    }
+    ft_lstiter(my_list, apply_function);
+    return (0);
+}*/
